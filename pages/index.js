@@ -4,7 +4,9 @@ import Depertment from '../components/Depertment'
 import Navbar from '../components/navbar'
 import doctors from '../components/images/doctors.png'
 import palyBtn from '../components/images/icon/play-btn.png'
-export default function Home() {
+import Doctorscard from '../components/card/DoctorsCard'
+export default function Home({ }) {
+
   return (
     <div >
       <Head>
@@ -78,12 +80,26 @@ export default function Home() {
             seciton End Here 
       ****************************/}
       {/***************************** 
-            seciton Start Here 
+           Doctors seciton Start Here 
       ****************************/}
 
-      <section className='container mx-auto my-10'>
-        
+      <section className='container mx-auto my-10 pt-10'>
+        <h1 className='text-5xl font-bold text-center text-neutral'>Professional Care provider</h1>
+        <p className='text-mini text-center mt-3'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat <br /> sunt culpa officia deserunt mollit anim est laborum</p>
+
+        <div className="grid grid-cols-3 gap-10">
+          <Doctorscard />
+        </div>
       </section>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const doctors = await fetch('/data.json').then(res => res.json())
+  return {
+    props: {
+      doctors
+    },
+  }
 }

@@ -9,3 +9,4 @@ const DepertmentCard = ({ icon, name }) => {
 }
 
 export default DepertmentCard;
+

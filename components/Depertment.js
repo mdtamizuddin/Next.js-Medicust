@@ -1,4 +1,4 @@
-import DepertmentCard from "./Cards";
+import DepertmentCard from "./DepartCards";
 import dental from './images/icon/dental.png'
 import cradiology from './images/icon/cradiology.png'
 import gastrology from './images/icon/gastrology.png'
