@@ -15,6 +15,7 @@ a {
   box-sizing: border-box;
 }
 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
@@ -35,9 +36,17 @@ h5,
 p {
   font-family: 'Roboto', sans-serif;
 }
-.text-mini{
+
+.text-mini {
   font-size: 18px;
 }
-.container{
+
+.container {
   width: 75%;
+}
+
+.blueBg{
+  background-size: auto; 
+  background-repeat: no-repeat;
+  padding: 100px 0px;
 }

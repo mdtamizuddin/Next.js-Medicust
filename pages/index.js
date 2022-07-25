@@ -1,10 +1,14 @@
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Depertment from '../components/Depertment'
 import Navbar from '../components/navbar'
-import doctors from '../components/images/doctors.png'
+import doctorsI from '../components/images/doctors.png'
 import palyBtn from '../components/images/icon/play-btn.png'
 import Doctorscard from '../components/card/DoctorsCard'
+import sectionI from '../components/images/section.png'
+import headphone from '../components/images/icon/headPhone.png'
+import inbox from '../components/images/icon/inbox.png'
 export default function Home({ doctors }) {
 
   return (
@@ -31,25 +35,25 @@ export default function Home({ doctors }) {
         </div>
       </header>
       {/***************************** 
-            seciton End Here 
+            section End Here 
       ****************************/}
       {/***************************** 
-            seciton Start Here 
+            section Start Here 
       ****************************/}
       <section className='py-14 container mx-auto'>
         <h1 className='text-4xl leading-tight font-bold text-neutral'>Need a doctor for checkup? <br />  Call for an emergency services!</h1>
       </section>
 
       {/***************************** 
-            seciton End Here 
+            section End Here 
       ****************************/}
       {/***************************** 
-            seciton Start Here 
+            section Start Here 
       ****************************/}
       <Depertment />
 
       {/***************************** 
-            seciton Start Here 
+            section Start Here 
       ****************************/}
       <section className='container mx-auto my-10'>
         <div className='h-[500px] w-full bg-neutral relative rounded-md'>
@@ -70,17 +74,17 @@ export default function Home({ doctors }) {
             </div>
 
             <div className='w-[50%]  h-full flex justify-end items-center'>
-              <Image src={doctors} />
+              <Image src={doctorsI} alt="" />
             </div>
           </div>
         </div>
       </section>
 
       {/***************************** 
-            seciton End Here 
+            section End Here 
       ****************************/}
       {/***************************** 
-           Doctors seciton Start Here 
+           Doctors section Start Here 
       ****************************/}
 
       <section className='container mx-auto my-10 pt-10'>
@@ -88,9 +92,59 @@ export default function Home({ doctors }) {
         <p className='text-mini text-center mt-3'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat <br /> sunt culpa officia deserunt mollit anim est laborum</p>
 
         <div className="grid grid-cols-4 gap-10 mt-16">
-          {doctors.map(doctor => <Doctorscard doctor={doctor}/>)}
+          {doctors.map((doctor, index) => <Doctorscard key={index} doctor={doctor} />)}
+          <div className='flex flex-col justify-center items-center bg-primary rounded-3xl cursor-pointer'>
+            <h2 className='text-white text-center font-semibold text-2xl'>Join our team</h2>
+            <p className='text-center mt-2 text-white'>Lorem ipsum dolor amet <br /> consectetur adipiscing elit <br /> sed eiusmod tempor</p>
+            <button className='btn text-white rounded-full btn-secondary mt-6'>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
+
+      {/***************************** 
+            section End Here 
+      ****************************/}
+      {/***************************** 
+          section Start Here 
+      ****************************/}
+
+      <section className='w-full mt-20 blueBg  bg-cover bg-center '
+        style={{
+          backgroundImage: `url('https://i.ibb.co/gym5bHb/blueBg.png')`
+        }}
+      >
+        <div className='flex justify-between container mx-auto'>
+          <div className='flex justify-center items-center'>
+            <div className='bg-white p-10 rounded-2xl'>
+              <h2 className='text-4xl leading-tight font-bold text-neutral text-center'>We always ready <br /> for a challenge.</h2>
+              <div className='flex items-center mt-4'>
+                <Image src={headphone} alt="" />
+                <h2 className='text-primary font-bold text-3xl ml-3'>+00 568 467 46</h2>
+              </div>
+              <div className='flex items-center mt-4'>
+                <h2 className='text-primary font-bold text-3xl ml-3'>medicust@gmail.com</h2>
+                <Image src={inbox} alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className='text-3xl font-semibold text-white'>Duis aute irure dolor in reprehenderit <br /> in voluptate velit esse cillum dolore eu<br />fugiat nulla pariatur.</h2>
+            <p className='mt-3 text-white'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu nostrud <br /> exercitation ullamco laboris nisi ut aliquip.
+            </p>
+            <div className='mt-10'>
+              <Image className='w-full' src={sectionI} alt="" />
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
     </div>
   )
 }
