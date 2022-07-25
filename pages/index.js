@@ -87,7 +87,7 @@ export default function Home({ doctors }) {
         <h1 className='text-5xl font-bold text-center text-neutral'>Professional Care provider</h1>
         <p className='text-mini text-center mt-3'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat <br /> sunt culpa officia deserunt mollit anim est laborum</p>
 
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-4 gap-10 mt-16">
           {doctors.map(doctor => <Doctorscard doctor={doctor}/>)}
         </div>
       </section>
@@ -96,7 +96,7 @@ export default function Home({ doctors }) {
 }
 
 export async function getStaticProps() {
-  const doctors = await fetch('https://raw.githubusercontent.com/mdtamizuddin/Next.js-Medicust/main/public/data.json').then(res => res.json())
+  const doctors = await fetch('https://raw.githubusercontent.com/mdtamizuddin/Next.js-Medicust/main/pages/api/doctors.json').then(res => res.json())
   return {
     props: {
       doctors
