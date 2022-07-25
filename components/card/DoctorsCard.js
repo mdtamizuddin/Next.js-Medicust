@@ -1,9 +1,9 @@
 import Image from "next/image"
 
-const Doctorscard = ({image}) => {
+const Doctorscard = ({doctor}) => {
     return (
         <div>
-            <Image className="w-full" src={image} alt="" />
+            <img  className="w-full mb-5" src={doctor.image} alt="" />
 
             <div>
                 <h1 className="text-3xl text-neutral font-bold text-center">{'Chriss Taylor'}</h1>

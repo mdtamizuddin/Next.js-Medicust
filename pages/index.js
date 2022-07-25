@@ -5,7 +5,7 @@ import Navbar from '../components/navbar'
 import doctors from '../components/images/doctors.png'
 import palyBtn from '../components/images/icon/play-btn.png'
 import Doctorscard from '../components/card/DoctorsCard'
-export default function Home({ }) {
+export default function Home({ doctors }) {
 
   return (
     <div >
@@ -88,7 +88,7 @@ export default function Home({ }) {
         <p className='text-mini text-center mt-3'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat <br /> sunt culpa officia deserunt mollit anim est laborum</p>
 
         <div className="grid grid-cols-3 gap-10">
-          <Doctorscard />
+          {doctors.map(doctor => <Doctorscard doctor={doctor}/>)}
         </div>
       </section>
     </div>
@@ -96,7 +96,7 @@ export default function Home({ }) {
 }
 
 export async function getStaticProps() {
-  const doctors = await fetch('/data.json').then(res => res.json())
+  const doctors = await fetch('https://raw.githubusercontent.com/mdtamizuddin/Next.js-Medicust/main/public/data.json').then(res => res.json())
   return {
     props: {
       doctors
