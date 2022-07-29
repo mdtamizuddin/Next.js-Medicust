@@ -24,6 +24,7 @@ a {
 @tailwind components;
 @tailwind utilities;
 
+
 .font-bold {
   font-family: 'Ubuntu', sans-serif;
   font-family: 700;
@@ -45,8 +46,14 @@ p {
   width: 75%;
 }
 
-.blueBg{
-  background-size: auto; 
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.blueBg {
+  background-size: auto;
   background-repeat: no-repeat;
   padding: 100px 0px;
 }

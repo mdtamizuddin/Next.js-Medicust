@@ -7,11 +7,12 @@ import neurology from './images/icon/neurology.png'
 import plastic from './images/icon/plastic-surgery.png'
 import opthalmology from './images/icon/opthalmology.png'
 import pediatrics from './images/icon/pediatrics.png'
+
 const Depertment = () => {
     return (
         <div className="py-14">
             <section className='container mx-auto my-10'>
-                <h1 className='text-center text-5xl font-bold text-neutral'>Our All Department</h1>
+                <h1 className='text-center lg:text-5xl text-3xl font-bold text-neutral'>Our All Department</h1>
                 <p className='text-center mt-5 text-mini'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat <br /> sunt culpa officia deserunt mollit anim est laborum.</p>
 
 
