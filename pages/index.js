@@ -5,7 +5,6 @@ import Depertment from '../components/Depertment'
 
 import doctorsI from '../components/images/doctors.png'
 import palyBtn from '../components/images/icon/play-btn.png'
-import Doctorscard from '../components/card/DoctorsCard'
 import sectionI from '../components/images/section.png'
 import headphone from '../components/images/icon/headPhone.png'
 import inbox from '../components/images/icon/inbox.png'
