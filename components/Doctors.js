@@ -6,7 +6,6 @@ const Doctors = () => {
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/mdtamizuddin/Next.js-Medicust/main/pages/api/doctors.json').then(res => res.json()).then(data => setDoctors(data))
     }, []);
-    console.log(doctor)
     return (
         <div>
             <section className='container mx-auto my-10 pt-10'>

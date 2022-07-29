@@ -10,7 +10,7 @@ const about = () => {
                 className='w-full lg:h-72 h-auto bg-cover bg-right flex flex-col justify-center'>
                 <div className="flex flex-col justify-center container mx-auto">
                     <h1 className="text-5xl font-bold text-neutral">About Us</h1>
-                    <div class="text-sm breadcrumbs mt-5">
+                    <div className="text-sm breadcrumbs mt-5">
                         <ul>
                             <li>
                                 <Link href={'/'}>
