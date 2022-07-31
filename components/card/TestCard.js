@@ -14,12 +14,12 @@ const TestCard = ({ review }) => {
                     <div className="flex items-center justify-between">
                         <div className="avatar">
                             <div className="w-16 rounded-full">
-                                <img src={review.photoURL} alt='profile image' />
+                                <img width={'auto'} src={review.photoURL} alt='profile image' />
                             </div>
                         </div>
                         <div>
                             <div className="w-16 rounded-full">
-                                <Image src={quote} alt='quote' />
+                                <Image src={quote} alt='' />
                             </div>
                         </div>
 

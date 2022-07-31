@@ -238,17 +238,17 @@ export default function Home() {
 }
 
 const items = [
-  <p className='text-white text-mini animate__animated animate__fadeInLeft'>
+  <p key={1} className='text-white text-mini animate__animated animate__fadeInLeft'>
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit <br /> sed do eiusmod tempor incididunt ut labore et dolore <br /> magna aliqua. Ut enim ad minim veniam
   </p>,
-  <p className='text-white text-mini animate__animated animate__fadeInDown'>
+  <p key={2} className='text-white text-mini animate__animated animate__fadeInDown'>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit <br /> sed do eiusmod tempor incididunt ut labore et dolore <br /> magna aliqua. Ut enim ad minim veniam
   </p>,
-  <p className='text-white text-mini animate__animated animate__fadeInLeft'>
+  <p key={3} className='text-white text-mini animate__animated animate__fadeInLeft'>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit <br /> sed do eiusmod tempor incididunt ut labore et dolore <br /> magna aliqua. Ut enim ad minim veniam
   </p>,
-  <p className='text-white text-mini animate__animated animate__fadeInDown'>
+  <p key={4} className='text-white text-mini animate__animated animate__fadeInDown'>
     Lorem ipsum dolor sit amet, consectetur adipisicing. <br /> sed do eiusmod tempor incididunt ut labore et dolore <br /> magna aliqua. Ut enim ad minim veniam
   </p>
 ]
